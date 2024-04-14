@@ -75,7 +75,7 @@ To run this application, you need:
 1. **Start the Script:**
    - Run the script using:
      ```bash
-     python script_name.py
+     python chatbot.py
      ```
 
 2. **Interact with the AI:**
