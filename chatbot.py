@@ -5,9 +5,6 @@ _ = load_dotenv(find_dotenv())
 
 client = openai.Client()
 
-messages_list = []
-model = 'gpt-3.5-turbo-0125'
-
 
 def text_generate(messages, gpt_model, max_tokens=1000, temperature=0):
     response = client.chat.completions.create(
@@ -22,13 +19,18 @@ def text_generate(messages, gpt_model, max_tokens=1000, temperature=0):
     print(f'Tokens: {response.usage.total_tokens}')
 
 
-text = input('Make a question: ')
+if __name__ == '__main__':
+    messages_list = []
+    model = 'gpt-3.5-turbo-0125'
+    print('ChatGPT: Hi! How can I help you today?')
 
-while text.lower() != 'thanks':
-    if text.lower() == 'info':
-        print(messages_list)
-        text = input('Question: ')
-    else:
-        messages_list.append({'role': 'user', 'content': f'{text}'})
-        text_generate(messages_list, model, 1000, 0.8)
-        text = input('Question: ')
+    text = input('user: ')
+
+    while text.lower() != 'thanks':
+        if text.lower() == 'info':
+            print(messages_list)
+            text = input('user: ')
+        else:
+            messages_list.append({'role': 'user', 'content': f'{text}'})
+            text_generate(messages_list, model, 1000, 1)
+            text = input('user: ')

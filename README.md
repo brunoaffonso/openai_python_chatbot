@@ -103,3 +103,5 @@ Contributions to this project are welcome. Please fork the repository and submit
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
+
+This README was generated using AI.
