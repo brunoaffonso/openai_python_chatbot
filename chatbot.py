@@ -24,8 +24,8 @@ def text_generate(messages, gpt_model, max_tokens=1000, temperature=0):
 
 text = input('Make a question: ')
 
-while text.lower() != 'info':
-    if text.lower() == 'thanks':
+while text.lower() != 'thanks':
+    if text.lower() == 'info':
         print(messages_list)
         text = input('Question: ')
     else:
