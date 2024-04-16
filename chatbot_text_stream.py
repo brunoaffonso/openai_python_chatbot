@@ -32,7 +32,7 @@ if __name__ == '__main__':
     print('chatbot: Hi! How can I help you today?')
     text_input = input('user: ')
 
-    while text_input.lower() != 'thanks':
+    while text_input.lower() != 'exit':
         if text_input.lower() == 'info':
             print(messages_list)
             text_input = input('\nuser: ')

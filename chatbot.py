@@ -26,7 +26,7 @@ if __name__ == '__main__':
 
     text = input('user: ')
 
-    while text.lower() != 'thanks':
+    while text.lower() != 'exit':
         if text.lower() == 'info':
             print(messages_list)
             text = input('user: ')
