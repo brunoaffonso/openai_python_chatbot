@@ -28,7 +28,7 @@ def text_generate(messages, gpt_model, max_tokens=500, temperature=0):
 
 if __name__ == '__main__':
     messages_list = []
-    model = 'gpt-4-turbo'
+    model = 'gpt-4o'
     print('chatbot: Hi! How can I help you today?')
     text_input = input('user: ')
 
